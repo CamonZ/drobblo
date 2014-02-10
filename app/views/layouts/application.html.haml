@@ -1,0 +1,20 @@
+!!!
+%html
+%head
+  %title Drobblo
+  = stylesheet_link_tag "application", media: "all"
+  = javascript_include_tag "application"
+  = csrf_meta_tags  
+%body
+  .container
+    %header.header
+      %ul.nav.nav-pills.pull-right
+        %li
+          =link_to  "Login", "#"
+
+      %h3.text-muted
+        =link_to "Drobblo", root_path
+    = yield
+    .footer
+      %p
+        Just a simple test
