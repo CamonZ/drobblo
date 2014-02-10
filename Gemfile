@@ -1,3 +1,4 @@
+ruby '2.0.0'
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -27,7 +28,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 
-gem "mongoid"
+gem 'mongoid', git: 'https://github.com/mongoid/mongoid.git'
 gem "bson_ext"
 
 group :doc do
