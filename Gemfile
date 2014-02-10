@@ -38,9 +38,6 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
-  gem 'guard'
-  gem 'guard-rspec'
-  gem 'guard-bundler'
   gem 'rb-fsevent'
   gem 'haml-rails'
   gem 'debugger'
@@ -48,7 +45,6 @@ end
 
 group :test do
   gem 'factory_girl_rails'
-  gem 'database_cleaner'
   gem 'shoulda-matchers'
 end
 
