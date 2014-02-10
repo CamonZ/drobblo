@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 1.2'
 
 
 gem "mongoid"
+gem "bson_ext"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
@@ -42,7 +43,6 @@ group :development, :test do
   gem 'guard-bundler'
   gem 'rb-fsevent'
   gem 'haml-rails'
-  gem 'less-rails'
   gem 'debugger'
 end 
 
