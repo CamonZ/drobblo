@@ -1,20 +1,16 @@
 !!!
 %html
-%head
-  %title Drobblo
-  = stylesheet_link_tag "application", media: "all"
-  = javascript_include_tag "application"
-  = csrf_meta_tags  
-%body
-  .container
-    %header.header
-      %ul.nav.nav-pills.pull-right
-        %li
-          =link_to  "Login", "#"
-
-      %h3.text-muted
-        =link_to "Drobblo", root_path
-    = yield
-    .footer
-      %p
-        Just a simple test
+  %head
+    %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
+    %title= content_for?(:title) ? yield(:title) : 'Drobblo'
+    %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Drobblo'}"}
+    = stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+    = javascript_include_tag "application", "data-turbolinks-track" => true
+    = csrf_meta_tags
+  %body
+    %header
+      = render 'layouts/navigation'
+    %main{:role => "main"}
+      = render 'layouts/messages'
+      .container
+        = yield
