@@ -31,6 +31,9 @@ gem 'jbuilder', '~> 1.2'
 gem 'mongoid', git: 'https://github.com/mongoid/mongoid.git'
 gem "bson_ext"
 
+
+gem 'devise'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -43,6 +46,11 @@ group :development, :test do
   gem 'haml-rails'
   gem 'debugger'
 end 
+
+group :development do
+  gem 'quiet_assets'
+  gem 'rails_layout'
+end
 
 group :test do
   gem 'factory_girl_rails'
